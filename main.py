@@ -30,7 +30,7 @@ intents = discord.Intents.default()
 bot = discord.Bot(debug_guilds=settings["main-server-id"], intents=intents)
 
 def permissionCheck(userid, allowedRoles, list=True):
-    server = bot.get_guild(settings['main-server-ids'][0])
+    server = bot.get_guild(settings['main-server-id'])
     user = server.get_member(int(userid))
 
     if list == True:
@@ -130,7 +130,10 @@ async def tag_create(ctx, name: str, message: str):
             with open('./tags.json', 'r') as f:
                 tags = json.load(f)
             
-            prevId = tags[-1]['id']
+            try:
+                prevId = tags[-1]['id']
+            except:
+                prevId = 0
             
             creationTime = round(time.time())
             newTagEntry = {
