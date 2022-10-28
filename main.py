@@ -39,6 +39,8 @@ def permissionCheck(userid, allowedRoles, list=True):
             if i in [r.id for r in user.roles]:
                 allowed = True
                 break
+    
+    return allowed
 
 @bot.event
 async def on_ready():
