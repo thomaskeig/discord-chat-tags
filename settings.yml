@@ -1,0 +1,44 @@
+# This file is used for editing anything you may want to change in the bot. After making changes, restart the bot for them to take effect.
+
+
+
+# BASIC SETTINGS
+# These settings must be modified by you in order for the bot to function.
+
+# Discord bot token
+bot-token: MTAyODI5NTgwMjk1NjgxMjM4MA.GBWInB.v5WnUbIn9mbadiYkZ5gbPVSJGNKc-mKzsi2GkQ
+
+# Server ID that the bot is being used in
+# Used to register guild commands in the correct guild
+main-server-id:
+- 953775916771835914
+
+roles:
+
+  # Any users with these roles will be able to delete and edit any tag
+  # NOTE: Do not leave empty. Set to 0 to disable.
+  moderator: [962381929452306472, 962382321862971532]
+
+  # Any users with these roles will be able to create tags and edit and delete their own tags. You must include all roles
+  # NOTE: Do not leave empty. Set to 0 to disable.
+  tagCreator: [962381929452306472, 962382321862971532, 993163956350898236]
+
+  # Any users with these roles wont be able to create any tags.
+  # NOTE: Do not leave empty. Set to 0 to disable.
+  tagCreationBlacklist: [1031227035701493772]
+
+
+
+
+
+# ADVANCED SETTINGS
+# These settings can be modified if you wish.
+
+# The max length allowed for the tag name/identifier
+nameMaxLength: 15
+
+# The max length allowed for the tag message
+messageMaxLength: 1000
+
+
+  
