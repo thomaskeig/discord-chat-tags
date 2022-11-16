@@ -27,7 +27,7 @@ intents = discord.Intents.default()
 # intents.members = True
 # intents.message_content = True
 
-bot = discord.Bot(debug_guilds=settings["main-server-id"], intents=intents)
+bot = discord.Bot(debug_guilds=[settings["main-server-id"]], intents=intents)
 
 def permissionCheck(userid, allowedRoles, list=True):
     server = bot.get_guild(settings['main-server-id'])
