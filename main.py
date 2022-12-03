@@ -219,7 +219,7 @@ async def tag_create(ctx, name: str, warning: str):
             with open('./tags.json', 'w') as f:
                 json.dump(tags, f, indent=4)
 
-            await ctx.respond(f'Tag `{tagName}` (`{tagId}`) has successfully been deleted!')
+            await ctx.respond(f'Tag `{tagName}` (`{tagId}`) has successfully been deleted!', ephemeral=True)
 
 
 @tag.command(name='list', description = 'List all the active tags')
