@@ -158,7 +158,7 @@ async def tag_create(ctx, name: str, message: str):
             embed.add_field(name='Creation Time', value=f'<t:{creationTime}>', inline=True)
             embed.add_field(name='ID', value=prevId+1, inline=True)
 
-            await ctx.respond(embed=embed)
+            await ctx.respond(embed=embed, ephemeral=True)
 
 
 
@@ -184,7 +184,7 @@ async def tag_create(ctx, name: str, warning: str):
     found = False
     dictUnit = 0
     for i in tags:
-        if i['name'] == query or str(i['id']) == query:
+        if i['name'].lower() == query.lower() or str(i['id']) == query:
             found = True
 
             placement = dictUnit
